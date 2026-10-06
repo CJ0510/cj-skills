@@ -1,0 +1,4 @@
+interface:
+  display_name: "Linux Source Learning"
+  short_description: "Learn kernel source through code, rationale, and experiments"
+  default_prompt: "Use $linux-source-learning to guide me through a Linux kernel source topic with a clear mental model and verification plan."
