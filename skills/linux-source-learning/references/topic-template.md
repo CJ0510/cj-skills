@@ -12,7 +12,7 @@ What should the learner be able to explain, trace, predict, verify, or debug?
 Why does the mechanism exist? What is in and out of scope?
 
 ## Kernel position
-Version, subsystem, source locations, and a compact architecture map.
+Repository, exact revision, version, architecture/configuration assumptions, subsystem, source locations, and a compact architecture map.
 
 ## Mental model
 A short causal explanation in the learner's own terms.
@@ -46,3 +46,5 @@ What problem is solved, how, why this design, and the next causal dependency to 
 ```
 
 Do not fabricate source snippets, results, history, or citations to fill the template.
+
+When the note belongs to a long-running study workspace, record its relative path in `learning-state.yaml` and keep raw traces or large experiment outputs in a separate experiment directory.

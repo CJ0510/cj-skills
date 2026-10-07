@@ -249,6 +249,29 @@ python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
 - 优先采用足够轻量的验证工具。
 - 不伪造源码、调用关系、历史信息或实验结果。
 
+## 完整学习工作区
+
+对于长期学习，可以让 Skill 在你指定的目录中管理：
+
+```text
+linux-learning/
+├── learning-state.yaml
+├── topics/
+├── experiments/
+└── history/
+```
+
+Skill 会把源码 revision、专题笔记、实验记录、历史证据和下一步计划关联起来，但不会把个人学习数据写进 Skill 安装目录。
+
+当分析依赖真实源码时，可以提供本地 Linux 仓库路径：
+
+```text
+使用 $linux-source-learning，基于 D:\workspace\linux 的实际源码分析 update_curr()。
+先确认仓库 revision、版本和工作区状态，不要修改当前分支。
+```
+
+维护者可以使用 `references/evaluation-scenarios.md` 中的行为场景检查重大改动，避免版本混用、源码倾倒、无证据 Why 或把阅读误判为掌握。
+
 ## 适用边界
 
 适用于 Linux 内核源码、子系统架构、运行机制、历史演进和验证实验的学习。

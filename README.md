@@ -6,7 +6,7 @@
 
 | Skill | 用途 | 状态 |
 |---|---|---|
-| [linux-source-learning](skills/linux-source-learning) | 系统化学习 Linux 内核源码、设计理由、历史和验证实验 | Experimental |
+| [linux-source-learning](skills/linux-source-learning) | 系统化学习 Linux 内核源码、设计理由、历史、实验和长期学习状态 | Experimental |
 
 ## 仓库结构
 
@@ -22,6 +22,11 @@ cj-skills/
         ├── README.md
         ├── agents/
         └── references/
+            ├── source-repository.md
+            ├── learning-state.md
+            ├── learning-artifacts.md
+            ├── evaluation-scenarios.md
+            └── ...
 ```
 
 每个 Skill 的顶层必须包含一个 `SKILL.md`。详细使用方式请阅读对应 Skill 目录中的 `README.md`。
@@ -57,6 +62,51 @@ cp -R ./skills/linux-source-learning ~/.codex/skills/
 ```text
 使用 $linux-source-learning，帮我制定 Linux v6.1 VFS 子系统学习计划。
 ```
+
+## linux-source-learning 使用示例
+
+### 学习一个新子系统
+
+```text
+使用 $linux-source-learning，以 Linux v6.1 为基线，
+帮我建立 VFS 子系统的架构地图、核心数据结构、主执行路径、
+源码阅读顺序、验证实验和掌握标准。
+```
+
+### 基于本地源码分析
+
+```text
+使用 $linux-source-learning，基于 D:\workspace\linux 的实际源码
+分析 update_curr()。先确认仓库 revision、版本和工作区状态，
+不要修改当前分支。
+```
+
+### 从运行时现象反推源码
+
+```text
+使用 $linux-source-learning。
+现象：线程唤醒后偶尔很久才获得 CPU。
+按照“现象 -> 假设 -> 证据 -> 内核路径 -> 源码 -> 验证”调查，
+先给出能区分不同假设的最小观测方案。
+```
+
+### 建立长期学习工作区
+
+```text
+使用 $linux-source-learning，在我指定的学习目录中创建
+learning-state.yaml，并规划 topics、experiments 和 history 目录。
+默认内核版本为 Linux v6.1，当前专题为 scheduler/CFS。
+```
+
+### 检查掌握程度
+
+```text
+使用 $linux-source-learning，通过 Explain、Trace、Predict、Debug、Modify
+检查我是否真正理解 CFS。每次只出一道题，回答后再评估薄弱环节。
+```
+
+完整模式、版本策略和产物管理说明见
+[Skill 使用文档](skills/linux-source-learning/README.md)。
 
 ## 更新已安装 Skill
 

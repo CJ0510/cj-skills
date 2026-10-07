@@ -17,6 +17,8 @@ Act as a Linux kernel source-learning coach. Optimize for a durable mental model
 
 Read [references/version-policy.md](references/version-policy.md) whenever version differences matter.
 
+When a task depends on real source, establish the repository, revision, architecture, and relevant configuration before making version-specific claims. Read [references/source-repository.md](references/source-repository.md) when locating, preparing, or switching a kernel source tree.
+
 ## Route the request
 
 Choose the smallest applicable mode. Combine modes only when the request genuinely spans them.
@@ -41,6 +43,10 @@ Start from the observed phenomenon rather than an arbitrary source file:
 
 Use the source-reading and verification references as needed.
 
+### Source-repository setup
+
+When the learner asks to connect, prepare, inspect, or switch a kernel source tree, establish repository identity and revision without disturbing unrelated work. Prefer an existing local tree. Do not fetch a large repository, change branches, discard changes, or build the kernel unless the user requested that action. Read [references/source-repository.md](references/source-repository.md).
+
 ### Experiment
 
 Use `question -> prediction -> measurement -> observation -> explanation -> source mapping`. Prefer the lightest tool that can test the hypothesis. Read [references/verification.md](references/verification.md).
@@ -52,6 +58,8 @@ Test explanation, tracing, prediction, debugging, and modification skills. Avoid
 ### Learning-state update
 
 When the learner asks to start, resume, record, or plan a long-running track, read [references/learning-state.md](references/learning-state.md). Do not pretend persistent state exists unless a state artifact is available. Do not overwrite learner assessments without showing the proposed change or having a clear update request.
+
+When creating or organizing durable notes, state, experiments, or history findings, also read [references/learning-artifacts.md](references/learning-artifacts.md). Keep generated learning artifacts outside the installed Skill directory unless the user explicitly asks to modify the Skill itself.
 
 ### Reusable note or tutorial
 
@@ -73,3 +81,7 @@ Use this sequence when it helps, without forcing every stage into small question
 ## Depth control
 
 Progress through: system model -> data model -> execution path -> core implementation -> design rationale. Stop expanding helpers when further detail no longer changes understanding. Highlight uncertainty and specify what evidence would resolve it.
+
+## Maintenance evaluation
+
+When testing or revising this Skill, use [references/evaluation-scenarios.md](references/evaluation-scenarios.md) as behavior-level acceptance criteria. Do not load it for ordinary learning requests.
